@@ -1,0 +1,18 @@
+service: serverless-ruby-test
+
+provider:
+  name: aws
+  runtime: java8
+  memorySize: 1024
+  timeout: 70
+
+package:
+  artifact: build/distributions/aws-lambda-ruby.zip
+
+functions:
+  hello:
+    handler: "AWSLambdaJRuby::handler"
+    events:
+      - http:
+          path: hello
+          method: get
