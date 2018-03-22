@@ -7,7 +7,7 @@ provider:
   timeout: 70
 
 package:
-  artifact: build/distributions/aws-lambda-ruby.zip
+  artifact: build/distributions/aws-lambda-jruby.zip
 
 functions:
   hello:
